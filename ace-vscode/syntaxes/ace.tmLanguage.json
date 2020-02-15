@@ -1,0 +1,48 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ace",
+	"patterns": [
+		{"include": "#comment"},
+		{"include": "#strings"},
+		{"include": "#keyword"},
+		{"include": "#constant"}
+	],
+	"repository": {
+		"keyword": {
+			"patterns": [
+				{
+					"name": "keyword.control.ace",
+					"match": "\\b(func|if|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.operator.ace",
+					"match": "[\\+|\\-|\\*|\\/|\\=]"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.language.ace",
+				"match": "\/\/[^\n]*"
+			}]
+		},
+		"constant": {
+			"patterns": [{
+				"name": "constant.language.ace",
+				"match": "\\d+"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.ace",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ace",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.ace"
+}

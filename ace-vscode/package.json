@@ -1,0 +1,25 @@
+{
+    "name": "ace-vscode",
+    "displayName": "Ace",
+    "description": "Language support for Ace.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ace",
+            "aliases": ["Ace", "ace"],
+            "extensions": [".ace"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ace",
+            "scopeName": "source.ace",
+            "path": "./syntaxes/ace.tmLanguage.json"
+        }]
+    }
+}

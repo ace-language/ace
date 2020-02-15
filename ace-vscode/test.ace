@@ -1,0 +1,8 @@
+// by cactus
+// squares two numbers together.
+
+func square(x: int, y: int) int {
+    a = 1
+    b = "Hello, world"
+    return x * y
+}
